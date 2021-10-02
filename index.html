@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./stye.css" />
+  </head>
+
+  <body>
+    <div id="start" class="flex-container">
+      <span class="text">NIKE</span>
+    </div>
+
+    <script>
+      const shoes = [
+        {
+          heart: "heart.png",
+          imageShoe: "shoe1.jpg",
+          shoeName: "show 1",
+          shoePrice: "300$",
+        },
+        {
+          heart: "heart.png",
+          imageShoe: "shoe2.jpg",
+          shoeName: "showe2",
+          shoePrice: "300$",
+        },
+        {
+          heart: "heart0.png",
+          imageShoe: "shoe3.jpg",
+          shoeName: "stsa tra 2",
+          shoePrice: "300$",
+        },
+        {
+          heart: "heart.png",
+          imageShoe: "shoe4.jpg",
+          shoeName: "shoe 3",
+          shoePrice: "300$",
+        },
+        {
+          heart: "heart.png",
+          imageShoe: "shoe5.jpg",
+          shoeName: "shoe 4",
+          shoePrice: "300$",
+        },
+        {
+          heart: "heart.png",
+          imageShoe: "shoe6.jpg",
+          shoeName: "sho 10",
+          shoePrice: "300$",
+        },
+        {
+          heart: "heart.png",
+          imageShoe: "shoe7.jpg",
+          shoeName: "showe 101",
+          shoePrice: "300$",
+        },
+      ];
+
+      function card(item) {
+        return `<div class="flex-item">
+            <div class="card">
+              <div class="heart">
+                <a href=""><img src="image/${item.heart}" alt="heart" /></a>
+              </div>
+              <div class="product-image">
+                <a href=""><img src="image/${item.imageShoe}" alt="${item.imageShoe}" /></a>
+              </div>
+              <div class="product-info">
+                <div class="product-name">
+                  ${item.shoeName}
+                </div>
+                <div class="product-price">  ${item.shoePrice}</div>
+              </div>
+             </div>
+        </div>`;
+      }
+      shoes.forEach((shoe) => {
+        document.getElementById("start").innerHTML += card(shoe);
+      });
+      //   document.getElementById("start").innerHTML = shoes.map((shoe) =>
+      //     card(shoe)
+      //   );
+    </script>
+  </body>
+</html>
